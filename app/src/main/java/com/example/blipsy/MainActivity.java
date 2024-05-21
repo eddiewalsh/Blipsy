@@ -12,8 +12,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.spotify.android.appremote.api.ConnectionParams;
 import com.spotify.android.appremote.api.Connector;
 import com.spotify.android.appremote.api.SpotifyAppRemote;
-import com.spotify.protocol.client.CallResult;
-import com.spotify.protocol.types.PlayerState;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -61,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void connected() {
-
+        getCurrentTrack();
     }
 
     @Override
@@ -76,18 +74,15 @@ public class MainActivity extends AppCompatActivity {
         if (mSpotifyAppRemote != null && mSpotifyAppRemote.isConnected()) {
             mSpotifyAppRemote.getPlayerApi()
                     .getPlayerState()
-                    .setResultCallback(new CallResult.ResultCallback<PlayerState>() {
-                        @Override
-                        public void onResult(PlayerState playerState) {
-                            // Handle the current player state
-                            if (playerState != null && playerState.track != null) {
-                                String currentTrackName = playerState.track.name;
-                                String currentTrackArtist = playerState.track.artist.name;
-                                Log.d("MainActivity", "Current Track: " + currentTrackName +
-                                        " by " + currentTrackArtist);
-                            } else {
-                                Log.d("MainActivity", "No track is currently playing.");
-                            }
+                    .setResultCallback(playerState -> {
+                        // Handle the current player state
+                        if (playerState != null && playerState.track != null) {
+                            String currentTrackName = playerState.track.name;
+                            String currentTrackArtist = playerState.track.artist.name;
+                            Log.d("MainActivity", "Current Track: " + currentTrackName +
+                                    " by " + currentTrackArtist);
+                        } else {
+                            Log.d("MainActivity", "No track is currently playing.");
                         }
                     });
         } else {
