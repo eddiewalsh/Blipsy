@@ -1,39 +1,23 @@
-# Blipsy
+# Blipsy 🎧🗺️
 
-## Blipsy is an Android application written in Java that allows users to discover music based on what others around them are listening to on Spotify.
+Blipsy is a soon-to-be-released  Android app (built with Java ) that lets you discover new music based on what others around you are listening to on Spotify.
 
-## Features:
-### Spotify Integration: Users sign in using the Spotify SDK to connect their accounts.
-### Location-Based Discovery: See what songs other users in your area are listening to.
-### Adjustable Radius: Broaden your search area to discover music from a wider range of people.
-### Blipsy Playlist: Create a personalized playlist in your Spotify account that stores songs you've liked from other users.
-### Song Sampling: Preview short snippets of songs before adding them to your Blipsy playlist.
-### User Rating System: Like other users' music taste to help them climb the rating tiers (for bragging rights!).
+#### Features:
 
-# Getting Started:
+* Connect with Spotify: Sign in with your Spotify account to get started. 
+* Location-Based Discovery: See what jams are trending around you.
+* Expand Your Horizon: Broaden your search area to find music from a wider range of people. ️
+* Build Your Playlist: Create a personalized Spotify playlist of songs you like from other users.
+* Song Previews: Take a quick listen to songs before adding them to your playlist.
+* Rate the Music Taste: Show some love (or not ) to other users' music choices and help them climb the rating ranks (just for bragging rights, of course! ).
 
-## Prerequisites:
-### Android Studio
-### Spotify Developer Account (https://developer.spotify.com/)
+#### Getting Started:
 
-## Setup:
-### Clone this repository.
-### Follow the instructions within the project to configure the Spotify SDK with your developer credentials.
-### Run the application:
-### Open the project in Android Studio.
-### Ensure you have an Android emulator or physical device connected.
-### Run the application.
+* Android Studio
+* Spotify Developer Account (https://developer.spotify.com/)
 
-## Technical Stack:
+#### Tech Used (So far):
 
-### Programming Language: Java
-### Development Platform: Android Studio
-### Third-Party SDKs: Spotify SDK
-
-## Note:
-
-## Further Development:
-
-### Implement chat functionality to connect with users who share similar music tastes.
-### Add filters to refine song discovery based on genre, mood, or artist.
-### Integrate social media sharing to promote music discoveries.
+* Programming Language: Java
+* Development Platform: Android Studio
+* Third-Party SDKs: Spotify SDK
